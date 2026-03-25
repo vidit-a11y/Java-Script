@@ -11,4 +11,4 @@ console.log(a.getAttribute("href"));
 
 let h2=document.createElement("h2")
 h2.textContent="Namaste";
-document.body.append(h2);
+document.body.append(h2); 
