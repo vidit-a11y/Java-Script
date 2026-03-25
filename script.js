@@ -557,53 +557,58 @@
 //     console.log("hello ji")
 // }
 
-function outerFunction(outerVariable) {
-    return function innerFunction(innerVariable) {
-        console.log('Outer Variable: ' + outerVariable);
-        console.log('Inner Variable: ' + innerVariable);
-    }
-}
+// function outerFunction(outerVariable) {
+//     return function innerFunction(innerVariable) {
+//         console.log('Outer Variable: ' + outerVariable);
+//         console.log('Inner Variable: ' + innerVariable);
+//     }
+// }
 
-const newFunction = outerFunction('outside');
-newFunction('inside'); 
-// Logs: 
-// Outer Variable: outside
-// Inner Variable: inside
+// const newFunction = outerFunction('outside');
+// newFunction('inside'); 
+// // Logs: 
+// // Outer Variable: outside
+// // Inner Variable: inside
 
-function createCounter() {
-    let count = 0; // This is "private"
+// function createCounter() {
+//     let count = 0; // This is "private"
 
-    return {
-        increment: function() {
-            count++;
-            console.log(count);
-        },
-        decrement: function() {
-            count--;
-            console.log(count);
-        }
-    }
-}
+//     return {
+//         increment: function() {
+//             count++;
+//             console.log(count);
+//         },
+//         decrement: function() {
+//             count--;
+//             console.log(count);
+//         }
+//     }
+// }
 
-const myCounter = createCounter();
-myCounter.increment(); // 1
-myCounter.increment(); // 2
-myCounter.increment(); // 3
-myCounter.decrement(); // 4
-console.log(myCounter.count); // undefined (You can't touch it directly!)
+// const myCounter = createCounter();
+// myCounter.increment(); // 1
+// myCounter.increment(); // 2
+// myCounter.increment(); // 3
+// myCounter.decrement(); // 4
+// console.log(myCounter.count); // undefined (You can't touch it directly!)
 
 
-function makeGreeting(name) {
-    const message = "Hello " + name;
+// function makeGreeting(name) {
+//     const message = "Hello " + name;
 
-    // We WRAP the return inside a new function
-    return function() {
-        return message; 
-    };
-}
+//     // We WRAP the return inside a new function
+//     return function() {
+//         return message; 
+//     };
+// }
 
-const greetHema = makeGreeting("Hema"); 
-// 'greetHema' is now a FUNCTION. 
-// It "captured" the message variable.
+// const greetHema = makeGreeting("Hema"); 
+// // 'greetHema' is now a FUNCTION. 
+// // It "captured" the message variable.
 
-console.log(greetHema()); // "Hello Hema"
+// console.log(greetHema()); // "Hello Hema"
+
+setTimeout(function(){
+    console.log("rajasthani");
+},1000);
+
